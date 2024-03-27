@@ -22,5 +22,11 @@ addProducts(prd:IProduct):Observable<IProduct>{
   getProductByCatId(catId:number):Observable<IProduct[]>{
     return this.httpClient.get<IProduct[]>(`http://localhost:3000/products?catId=${catId}`)
   }
+ editProducts(prd:IProduct):Observable<IProduct>{
+    return  this.httpClient.put<IProduct>(`http://localhost:3000/products${prd.id}` , JSON.stringify(prd))
+    }
+    delProducts(prd:IProduct):Observable<IProduct>{
+      return  this.httpClient.delete<IProduct>(`http://localhost:3000/products${prd.id}`)
+      }
  // httpClient=inject(HttpClient)
 }

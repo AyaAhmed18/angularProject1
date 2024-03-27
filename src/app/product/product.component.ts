@@ -54,6 +54,8 @@ this.category=[
     this._ApiProduct.getAllProducts().subscribe({
       next:(res)=>{
         this.filterProducts=res
+        console.log(res);
+        
       },
       error:(err)=>{
         console.log(err);

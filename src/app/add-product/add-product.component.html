@@ -1,13 +1,26 @@
 <h1>{{newPrd |json}}</h1>
-<form (submit)="addNewProduct()">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Name</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" name="name" [(ngModel)]="newPrd.name" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+<form (submit)="addNewProduct()" #prdForm="ngForm">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" #prdName="ngModel" name="name"  
+           pattern="^[a-zA-Z]{3,15}$" required [(ngModel)]="newPrd.name" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text text-danger" [hidden]="prdName.valid || prdName.untouched">
+      @if(prdName.errors?.['required']){
+        <p>Required</p>
+      }
+      @if(prdName.errors?.['pattern']){
+      <p>Your name should be between 3 and 15 characters long and contain only letters.</p>
+      }
     </div>
+  </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Quantity</label>
-      <input type="number" class="form-control" id="exampleInputPassword1" name="quantity" [(ngModel)]="newPrd.quantity">
+      <input type="number" class="form-control" id="exampleInputPassword1" #qnt="ngModel" name="quantity" [(ngModel)]="newPrd.quantity">
+      <div id="emailHelp" class="form-text text-danger" [hidden]="qnt.valid || qnt.untouched">
+        @if(qnt.errors?.['required']){
+          <p>Required</p>
+        }
+      </div>
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Price</label>
@@ -27,5 +40,5 @@
         </select>
         <!-- <label for="floatingSelect">Works with selects</label> -->
       </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" [disabled]="prdForm.invalid" class="btn btn-primary">Submit</button>
   </form>
