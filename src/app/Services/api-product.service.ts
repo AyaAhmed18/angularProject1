@@ -9,6 +9,10 @@ import { IProduct } from '../Models/iproduct';
 export class ApiProductService {
   //private httpClient:HttpClient
   constructor(private httpClient:HttpClient) { }
+
+addProducts(prd:IProduct):Observable<IProduct>{
+   return  this.httpClient.post<IProduct>(`http://localhost:3000/products` , JSON.stringify(prd))
+   }
   getAllProducts():Observable<IProduct[]>{
    return this.httpClient.get<IProduct[]>("http://localhost:3000/products")
   }
@@ -18,4 +22,5 @@ export class ApiProductService {
   getProductByCatId(catId:number):Observable<IProduct[]>{
     return this.httpClient.get<IProduct[]>(`http://localhost:3000/products?catId=${catId}`)
   }
- // htt
+ // httpClient=inject(HttpClient)
+}

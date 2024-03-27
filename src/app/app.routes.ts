@@ -5,6 +5,7 @@ import { OrderComponent } from './order/order.component';
 import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsComponent } from './details/details.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 export const routes: Routes = [
     {path:'',redirectTo:'/Home', pathMatch:'full'},
@@ -12,6 +13,7 @@ export const routes: Routes = [
     {path:'AboutUs',component:AboutUsComponent},
     {path:'Order',component:OrderComponent},
     {path:'Product',component:ProductComponent},
+    {path:'AddProduct',component:AddProductComponent},
     {path:'Details/:id',component:DetailsComponent},
     {path:'**',component:NotFoundComponent}
     
