@@ -1,0 +1,48 @@
+ 
+ 
+
+<!-- <h1>{{selectedCatId}}</h1> -->
+<br>
+ <!-- <div class="row row-cols-1 row-cols-md-4 g-4"  >
+  <ng-container *ngFor="let prd of products" appRoundedBorder>
+    <div class="col" *ngIf="prd.quantity!=0" [class.d-none]="prd.CategoryId != selectedCatId">
+      <div class="card" [style.background-color]="(prd.quantity==1)?'yellow':'white'">
+        <img [src]=" prd.imgUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{prd.name}}</h5>
+          <p class="card-title">Quantity: {{prd.quantity}}</p>
+          <p class="card-text">Price:   {{prd.price}}</p>
+          <button class="btn btn-primary" (click)="buy(prd)">Buy</button>
+        </div>
+
+      </div>
+    </div>
+   </ng-container>
+  </div> -->
+
+<div>Products</div>
+  <div class="row row-cols-1 row-cols-md-4 g-4"  >
+    @for(prd of filterProducts;track prd.id;let i=$index){
+      <div class="col" >
+        <div class="card" [style.background-color]="(prd.quantity==1)?'yellow':'white'">
+          <img [src]=" prd.imgUrl" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{prd.name}}</h5>
+            <p class="card-title">Quantity: {{prd.quantity}}</p>
+            <p class="card-text">Price:   {{prd.price}}</p>
+            <button class="btn btn-primary" (click)="buy(prd)">Buy</button>
+            <button class="btn btn-primary mx-3" (click)="navigateToDetails(prd.id) ">Details</button>
+          </div>
+  
+        </div>
+      </div>
+    
+  }
+  </div>
+
+
+  <div>
+    <h2>{{nationalID | nationalId :'DD-MM-YY'}}</h2>
+    <h2>{{code | codePipe}}</h2>
+  </div>
+

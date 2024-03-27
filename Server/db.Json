@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "samsung",
+      "quantity": 200,
+      "price": 13000,
+      "imgUrl": "https://th.bing.com/th?id=OIP.ZXKy1wOO4o4xbsn6BMCwQQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "CategoryId": 1
+    },
+    {
+      "id": "2",
+      "name": "Hawawi",
+      "quantity": 1,
+      "price": 13500,
+      "imgUrl": "https://th.bing.com/th?id=OIP.ZXKy1wOO4o4xbsn6BMCwQQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "CategoryId": 1
+    },
+    {
+      "id": "3",
+      "name": "Dell",
+      "quantity": 2,
+      "price": 23000,
+      "imgUrl": "https://th.bing.com/th?id=OIP.ZXKy1wOO4o4xbsn6BMCwQQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "CategoryId": 2
+    },
+    {
+      "id": "4",
+      "name": "HP",
+      "quantity": 5,
+      "price": 25000,
+      "imgUrl": "https://th.bing.com/th?id=OIP.ZXKy1wOO4o4xbsn6BMCwQQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "CategoryId": 2
+    },
+    {
+      "id": "5",
+      "name": "Nokia",
+      "quantity": 30,
+      "price": 10000,
+      "imgUrl": "https://th.bing.com/th?id=OIP.V8NVXODUkODhicTKe7MblAHaIL&w=237&h=262&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "CategoryId": 1
+    },
+    {
+      "id": "6",
+      "name": "Tosheba",
+      "quantity": 3,
+      "price": 23000,
+      "imgUrl": "https://th.bing.com/th?id=OIP.V8NVXODUkODhicTKe7MblAHaIL&w=237&h=262&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "CategoryId": 3
+    },
+    {
+      "id": "7",
+      "name": "Sharp",
+      "quantity": 0,
+      "price": 25000,
+      "imgUrl": "https://th.bing.com/th?id=OIP.V8NVXODUkODhicTKe7MblAHaIL&w=237&h=262&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "CategoryId": 3
+    },
+    {
+      "id": "8",
+      "name": "Redmi",
+      "quantity": 1,
+      "price": 10000,
+      "imgUrl": "https://th.bing.com/th?id=OIP.V8NVXODUkODhicTKe7MblAHaIL&w=237&h=262&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "CategoryId": 1
+    },
+    {
+      "id": "717f"
+    }
+  ],
+  "Categorires": [
+    {
+      "Id": "1",
+      "name": "mobiles",
+      "id": "24a4"
+    },
+    {
+      "Id": "2",
+      "name": "Televisions",
+      "id": "d088"
+    },
+    {
+      "Id": "3",
+      "name": "Labtops",
+      "id": "f2e0"
+    }
+  ]
+}

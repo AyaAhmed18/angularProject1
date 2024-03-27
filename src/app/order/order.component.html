@@ -1,0 +1,38 @@
+<div class="form-floating">
+    <select [(ngModel)]="selectedCatId" class="form-select" id="floatingSelect" aria-label="Floating label select example" >
+     <option value="0">All</option>
+      <option [value]="cat.Id" selected *ngFor="let cat of category" >{{cat.name}}</option>
+    </select>
+    <!-- <label for="floatingSelect">Works with selects</label> -->
+  </div>
+
+
+
+  <div class="my-5  p-5">
+    <app-product [recievedCatId]="selectedCatId" (OnTotalPriceChanged)= "ChangePrice($event)" ></app-product>  
+    
+  </div>
+
+  <h1>Total Order Price:{{TotalPrice}}</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prd of BuyedProducts" [class.d-none]=>
+        <td>{{prd.name}}</td>
+        <td>{{prd.price}}</td>
+        <td>{{prd.quantity}}</td>
+        <a href="" (click)="removeProduct(prd)">Remove</a>
+
+      </tr>
+     
+    </tbody>
+  </table>
+  <!-- -->
